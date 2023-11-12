@@ -1,0 +1,34 @@
+@media (min-width: 576px) {
+  .home-page-main-container {
+    padding-top: 70px;
+    background: #fcf6f5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .home-page-bg {
+    width: 100%;
+  }
+  .home-page-content {
+    width: 50vw;
+    background: white;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+  }
+  .main-page-content-panel {
+    width: 25vw;
+    height: 25vw;
+  }
+  .text-panel {
+    background: #000;
+  }
+  .image-panel {
+    background: #0f0;
+  }
+}

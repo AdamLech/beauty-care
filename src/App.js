@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  Switch,
+  Route,
+  Routes,
+  Link,
+  BrowserRouter as Router,
+} from "react-router-dom";
+import "./App.css";
+import { Home } from "./Components/Home";
+import { About } from "./Components/About";
+import { Products } from "./Components/Products";
+import { ShopLocation } from "./Components/ShopLocation";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="main-container">
+        <div className="main-container-header">
+          <div className="navbar">
+            <ul>
+              <li className="nav-bar-element">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="nav-bar-element">
+                <Link to="/products">Products</Link>
+              </li>
+              <li className="nav-bar-element">
+                <Link to="/about">About</Link>
+              </li>
+              <li className="nav-bar-element">
+                <Link to="/shop-location">Location</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="main-container-routes-wraper">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/shop-location" element={<ShopLocation />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
