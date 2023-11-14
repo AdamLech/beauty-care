@@ -5,8 +5,28 @@
   font-family: Montserrat;
   text-decoration: none;
   list-style: none;
-  color: #f5f5dc;
+  color: #191919;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300 !important;
+}
+
+h1 {
+  font-size: calc(1.5em * 1.618 * 1.618);
+}
+h3 {
+  font-size: calc(1.5em * 1.618);
+}
+
+p {
+  font-size: calc(1.5em);
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,9 +35,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.container::-webkit-scrollbar {
-  width: 2em;
-  background-color: #f5f5f5;
 }
