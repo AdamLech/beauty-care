@@ -12,6 +12,7 @@ large:992-1200
   background: #901;
   color: #f5f5dc;
   position: fixed;
+  z-index: 100;
   top: 0;
 }
 
@@ -69,11 +70,12 @@ large:992-1200
     width: 0%;
     height: 1.5px;
     background-color: #f5f5dc;
-    transition: width 0.25s ease-in-out;
+    transition: width 0.3s ease-in;
   }
 
   .nav-bar-element:hover::after {
     width: 100%;
+    transition: width 0.2s ease-out;
   }
 
   /*

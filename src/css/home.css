@@ -11,9 +11,14 @@
 
   .home-page-bg {
     width: 100%;
+    background-image: url(../img/main-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
   }
   .home-page-content {
-    width: 50vw;
+    width: 40vw;
     background: white;
     height: 100%;
     display: flex;
@@ -22,8 +27,8 @@
     justify-content: start;
   }
   .main-page-content-panel {
-    width: 25vw;
-    height: 25vw;
+    width: 20vw;
+    height: 20vw;
   }
   .text-panel {
     background: #000;

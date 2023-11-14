@@ -16,3 +16,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.container::-webkit-scrollbar {
+  width: 2em;
+  background-color: #f5f5f5;
+}
