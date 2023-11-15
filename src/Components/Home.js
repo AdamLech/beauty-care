@@ -10,14 +10,12 @@ export const Home = (props) => {
   useEffect(() => {
     const handleScroll = () => {
       const background = document.querySelector(".home-page-bg");
-      const foreground = document.querySelector(".home-page-content");
       const bgTitle = document.querySelector(".home-page-bg-content");
       const scrollPosition = window.scrollY;
       const slowScroll = scrollPosition * 0.6;
       const slowScroll2 = scrollPosition * 0.1;
 
       background.style.transform = `translateY(${slowScroll}px)`;
-      //foreground.style.transform = `translateY(-${scrollPosition}px)`;
       bgTitle.style.transform = `translateY(-${slowScroll2}px)`;
     };
 
