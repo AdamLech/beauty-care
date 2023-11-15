@@ -54,6 +54,7 @@ large:992-1200
   flex-direction: column;
   width: 100%;
   height: 100%;
+  margin-top: 70px;
 }
 
 @media (min-width: 576px) {
