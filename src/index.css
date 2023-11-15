@@ -17,19 +17,20 @@ h6 {
 }
 
 h1 {
-  font-size: calc(1.5em * 1.618 * 1.618);
+  font-size: calc(3em);
 }
 h3 {
-  font-size: calc(1.5em * 1.618);
+  font-size: calc(2.4em);
 }
 
 p {
-  font-size: calc(1.5em);
+  font-size: calc(1.3em);
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #ddd;
 }
 
 code {

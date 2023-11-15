@@ -1,4 +1,4 @@
-@media (min-width: 576px) {
+@media (min-width: 1200px) {
   .home-page-main-container {
     background: #ddd;
     width: 100%;
@@ -6,7 +6,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    overflow-y: hidden;
   }
 
   .home-page-bg {
@@ -18,13 +17,13 @@
   }
 
   .home-page-bg img {
-    height: 100vh;
+    width: 75vw;
     align-self: flex-end;
   }
 
   .home-page-bg-content {
-    top: 300px;
-    left: 121px;
+    top: 10vw;
+    left: 5vw;
     position: absolute;
   }
 
@@ -49,10 +48,10 @@
 
   .home-page-content {
     background: #fcf6f5;
-    width: 1500px;
+    width: 80vw;
     z-index: 10;
     padding: 5% 10%;
-    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
   }
 
   .home-page-content-panel {
@@ -88,7 +87,10 @@
   }
 
   .img-panel {
-    width: 300px;
+    width: 35%;
+    /* height: 100%; */
+    flex-shrink: 0;
+    object-fit: contain;
   }
 
   .home-page-main-container-footer {
