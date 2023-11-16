@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Products.css";
-import image1 from "../img/image1";
+import image1 from "../img/img1.png";
 
 export const Products = (props) => {
   return (
