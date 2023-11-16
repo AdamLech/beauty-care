@@ -1,22 +1,27 @@
-import React from "react";
+import { React, useEffect } from "react";
 import "../css/home.css";
 import homePageBg from "../img/homepagebg.jpg";
 
 export const Home = (props) => {
-  const background = document.querySelector(".home-page-main-bg");
-  // const bgTitle = document.querySelector(".about-page-bg-content");
-  const scrollPosition = window.scrollY;
-  const slowScroll = scrollPosition * 0.6;
-  // const slowScroll2 = scrollPosition * 0.1;
+  useEffect(() => {
+    const image = document.querySelector(".home-page-bg");
+    const scrollHandler = () => {
+      const scrollPosition = window.scrollY;
+      const slowScroll = scrollPosition * 0.6;
+      image.style.transform = `translateY(${slowScroll}px)`;
+    };
 
-  background.style.transform = `translateY(${slowScroll}px)`;
-  // bgTitle.style.transform = `translateY(-${slowScroll2}px)`;
+    window.addEventListener("scroll", scrollHandler);
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
   return (
-    <div className="home-page-main">
-      <div className="home-page-main-bg">
+    <div className="home-page">
+      <div className="home-page-bg">
         <img src={homePageBg} />
       </div>
-      <div className="home-page-main-content">
+      <div className="home-page-content ctnt">
         <div>
           cwel
           <br />

@@ -37,3 +37,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.ctnt {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+  background: #fcf6f5;
+  width: 80vw;
+  z-index: 10;
+  padding: 5% 10%;
+}

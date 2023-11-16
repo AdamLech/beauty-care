@@ -34,7 +34,7 @@ export const About = (props) => {
         </div>
         <img src={image1} alt="" />
       </div>
-      <div className="about-page-content">
+      <div className="about-page-content ctnt">
         <div className="about-page-content-panel">
           <h1>
             <span>Sustainable Style</span>, Naturally Yours
@@ -81,28 +81,6 @@ export const About = (props) => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="about-page-main-container-footer">
-        <p>© 2022 Leafy Hues. All rights reserved.</p>
-        <ul>
-          <li>123 Main Street, City, Country</li>
-          <li>Phone: 123-456-789</li>
-          <li>Email: info@example.com</li>
-        </ul>
-        <ul>
-          <li>
-            <a href="/about-us">About Us</a>
-          </li>
-          <li>
-            <a href="/terms">Terms of Service</a>
-          </li>
-          <li>
-            <a href="/privacy-policy">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="/faq">FAQ</a>
-          </li>
-        </ul>
       </div>
     </div>
   );
