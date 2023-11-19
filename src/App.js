@@ -73,6 +73,15 @@ function App() {
             <li>
               <a href="/faq">FAQ</a>
             </li>
+            <li>
+              <a
+                href="https://www.flaticon.com/free-icons/next"
+                title="next icons"
+              >
+                Next icons created by
+                <br /> Kiranshastry - Flaticon
+              </a>
+            </li>
           </ul>
         </div>
       </div>

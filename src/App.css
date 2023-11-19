@@ -40,7 +40,7 @@ large:992-1200
 /*////////////////////////////*/
 
 .main-container-header {
-  /* background: rgba(150, 150, 150, 0.5); */
+  background: rgba(150, 150, 150, 0.5);
   position: fixed;
   z-index: 500;
   top: 0;

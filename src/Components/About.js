@@ -8,9 +8,9 @@ import imgPanel4 from "../img/img4.png";
 
 export const About = (props) => {
   useEffect(() => {
+    const background = document.querySelector(".about-page-bg");
+    const bgTitle = document.querySelector(".about-page-bg-content");
     const handleScroll = () => {
-      const background = document.querySelector(".about-page-bg");
-      const bgTitle = document.querySelector(".about-page-bg-content");
       const scrollPosition = window.scrollY;
       const slowScroll = scrollPosition * 0.6;
       const slowScroll2 = scrollPosition * 0.1;
