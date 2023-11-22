@@ -5,9 +5,36 @@ import showcaseImg1 from "../img/showcase1.jpg";
 import showcaseImg2 from "../img/showcase2.jpg";
 import showcaseImg3 from "../img/showcase3.jpg";
 import nextArrow from "../img/next.png";
+import nextArrowL from "../img/nextL.png";
 
 export const Home = (props) => {
   useEffect(() => {
+    const showcaseSliderArrow = document.querySelectorAll("[data-button]");
+    const showcaseSlider = document.querySelector(".showcase-content");
+    const scSliderPos =
+      getComputedStyle(showcaseSlider).transform.split(",")[4];
+
+    showcaseSliderArrow.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        console.log(
+          getComputedStyle(showcaseSlider).transform.split(",")[4] +
+            " " +
+            showcaseSlider.offsetWidth +
+            " " +
+            (scSliderPos - scSliderPos * (1 / 3))
+        );
+        if (button.getAttribute("data-button") === "next") {
+          showcaseSlider.style.transform = `translateX(-${
+            scSliderPos - scSliderPos / 3
+          }px)`;
+        } else {
+          showcaseSlider.style.transform = `translateX(-${
+            scSliderPos - scSliderPos / 3
+          }px)`;
+        }
+      });
+    });
+
     const scrollHandler = () => {
       const image = document.querySelector(".home-page-bg");
       const bgTitle = document.querySelector(".home-page-bg-content");
@@ -16,7 +43,11 @@ export const Home = (props) => {
     };
 
     window.addEventListener("scroll", scrollHandler);
+
     return () => {
+      // showcaseSliderArrow.forEach((arrow) => {
+      //   arrow.removeEventListener("click", showcaseHandler);
+      // });
       window.removeEventListener("scroll", scrollHandler);
     };
   }, []);
@@ -24,29 +55,37 @@ export const Home = (props) => {
     <div className="home-page">
       <div className="home-page-bg">
         <div className="home-page-bg-content">
-          <div>New Collection</div>
-          <span>Tangerine</span>
-          Temptation
+          New Collection
+          <div>
+            <span>Tangerine</span>
+            <div>Temptation</div>
+          </div>
         </div>
         <img src={homePageBg} />
       </div>
       <div className="home-page-content ctnt">
         <div className="home-page-content-showcase">
-          <div className="showcase-arrow-left showcase-arrow">
-            <img src={nextArrow}></img>
+          <div
+            data-button="prev"
+            className="showcase-arrow-left showcase-arrow"
+          >
+            <img src={nextArrowL}></img>
           </div>
           <div className="showcase-content">
-            <div>
-              <img className="showcase-img" src={showcaseImg1} />
+            <div className="se1 showcase-element">
+              <img src={showcaseImg1} />
             </div>
-            <div>
-              <img className="showcase-img" src={showcaseImg2} />
+            <div className="se2 showcase-element">
+              <img src={showcaseImg2} />
             </div>
-            <div>
-              <img className="showcase-img" src={showcaseImg3} />
+            <div className="se3 showcase-element">
+              <img src={showcaseImg3} />
             </div>
           </div>
-          <div className="showcase-arrow-right showcase-arrow">
+          <div
+            data-button="next"
+            className="showcase-arrow-right showcase-arrow"
+          >
             <img src={nextArrow} />
           </div>
         </div>

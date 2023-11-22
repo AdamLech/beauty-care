@@ -36,57 +36,77 @@
     display: flex;
     color: wheat;
     align-items: center;
+    justify-content: center;
     background: #333;
-    /* padding: 10px 20px; */
-    justify-content: space-between;
     flex-direction: column;
-    padding-right: 10px;
   }
 
-  .home-page-bg-content span {
+  .home-page-bg-content div {
+    display: flex;
+    font-family: urbanist !important;
+    font-weight: 300;
+  }
+
+  .home-page-bg-content div div {
+    color: wheat;
+    padding: 0px 5px;
+  }
+
+  .home-page-bg-content div span {
     color: #333;
     background: wheat;
-    padding-left: 10px;
-    font-family: pacifico !important;
+    padding: 0px 5px;
   }
 
   .home-page-content-showcase {
-    /* display: block, showcase-content df jcc aic, position absolute */
     position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* display: flex; */
     overflow: hidden;
-    height: 35vw;
+    height: 600px;
+  }
+
+  .showcase-content {
+    display: flex;
+    width: 300%;
+    /* overflow: hidden; */
+    /* background: #000; */
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-33.33%);
+    /* display: inline-block; */
+  }
+
+  .showcase-element {
+    /* background: #f0f; */
+    flex: 1 0 33.33%;
+  }
+
+  .showcase-element img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   .showcase-arrow {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
     z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-out;
+    padding: 10px;
+  }
+
+  .showcase-arrow:hover {
+    transition: all 0.2s ease-in;
+    background: rgba(0, 0, 0, 0.3);
   }
 
   .showcase-arrow-left {
-    transform: rotate(180deg);
     left: 20px;
   }
   .showcase-arrow-right {
     right: 20px;
-  }
-
-  .showcase-content {
-    position: absolute;
-  }
-
-  .showcase-content div {
-  }
-
-  .showcase-img {
-    width: 100%;
-    object-fit: cover;
   }
 }
