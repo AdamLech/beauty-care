@@ -6,6 +6,7 @@
   text-decoration: none;
   list-style: none;
   color: #191919;
+  scroll-behavior: unset;
 }
 h1,
 h2,

@@ -8,14 +8,11 @@ import nextArrow from "../img/next.png";
 
 export const Home = (props) => {
   useEffect(() => {
-    const image = document.querySelector(".home-page-bg");
-    const bgTitle = document.querySelector(".home-page-bg-content");
     const scrollHandler = () => {
-      const scrollPosition = window.scrollY;
-      const slowScroll = scrollPosition * 0.6;
-      const slowScroll2 = scrollPosition * 0.1;
-      image.style.transform = `translateY(${slowScroll}px)`;
-      bgTitle.style.transform = `translateY(-${slowScroll2}px)`;
+      const image = document.querySelector(".home-page-bg");
+      const bgTitle = document.querySelector(".home-page-bg-content");
+      image.style.transform = `translateY(${window.scrollY * 0.6}px)`;
+      bgTitle.style.transform = `translateY(-${window.scrollY * 0.1}px)`;
     };
 
     window.addEventListener("scroll", scrollHandler);
